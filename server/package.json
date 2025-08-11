@@ -6,16 +6,19 @@
   "scripts": {
     "watch": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env node src/server.js"
+    "start": " node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cross-env": "^10.0.0"
+    "cross-env": "^10.0.0",
+    "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
     "express": "^5.1.0"
   }
 }

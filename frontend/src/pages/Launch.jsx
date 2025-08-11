@@ -57,15 +57,17 @@ const LoadingSpinner = styled.div`
 `;
 
 const Launch = ({ planets = [], entered, isPendingLaunch, submitLaunch }) => {
-  const selectorOptions = useMemo(
-    () =>
-      planets.map(({ _id, keplerName }) => (
-        <option key={_id} value={keplerName}>
-          {keplerName}
+  const selectorOptions = useMemo(() => {
+    return planets.map((planet, index) => {
+      const key = planet._id ?? planet.keplerName ?? index;
+      return (
+        <option key={key} value={planet.kepler_name}>
+          {planet.kepler_name}
         </option>
-      )),
-    [planets]
-  );
+      );
+    });
+  }, [planets]);
+
   console.log("PLANETS IN FRONTEND: ", planets);
 
   const today = new Date().toISOString().split("T")[0];
