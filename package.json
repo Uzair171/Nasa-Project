@@ -1,0 +1,30 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix frontend",
+    "install": "npm run install-client && npm run install-server",
+    "server": "npm run watch --prefix server",
+    "client": "npm run dev --prefix frontend",
+    "watch": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "npm run test --prefix server && npm run test --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uzair171/Nasa-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Uzair171/Nasa-Project/issues"
+  },
+  "homepage": "https://github.com/Uzair171/Nasa-Project#readme"
+}
