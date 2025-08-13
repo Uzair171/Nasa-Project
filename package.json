@@ -10,6 +10,7 @@
     "server": "npm run watch --prefix server",
     "client": "npm run dev --prefix frontend",
     "watch": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "npm run build --prefix frontend && npm start --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix frontend"
   },
   "devDependencies": {
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/Uzair171/Nasa-Project/issues"
   },
-  "homepage": "https://github.com/Uzair171/Nasa-Project#readme"
+  "homepage": "https://github.com/Uzair171/Nasa-Project#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
+  }
 }
